@@ -4,9 +4,6 @@ target:
   - claude
 dependencies:
   apm:
-    - github/awesome-copilot/instructions/caveman-mode.instructions.md
-    - github/awesome-copilot/instructions/code-review-generic.instructions.md
     - github/awesome-copilot/instructions/shell.instructions.md
     - multica-ai/andrej-karpathy-skills/skills/karpathy-guidelines
-    - jterral/copilot-playbook/skills/git-conventional-commit
-    - jterral/copilot-playbook/skills/git-pull-request
+    - jterral/ai-marketplace/plugins/git-workflow
