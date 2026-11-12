@@ -1,61 +1,132 @@
 lockfile_version: '1'
-generated_at: '2026-05-22T09:22:04.679336+00:00'
-apm_version: 0.14.0
+apm_version: 0.35.0
 dependencies:
 - repo_url: github/awesome-copilot
+  name: awesome-copilot-shell
   host: github.com
-  resolved_commit: 5b049e4e196c10aab8ddfd9e492323d08cf985b0
-  virtual_path: instructions/caveman-mode.instructions.md
-  is_virtual: true
-  deployed_files:
-  - .claude/rules/caveman-mode.md
-  deployed_file_hashes:
-    .claude/rules/caveman-mode.md: sha256:a1ebc75e6cfab8e0b8cb25887f1856a1a5e2d5d161e8ee5905b126473d3b2ce6
-  content_hash: sha256:55a6e3df1f84607749c2ea2e20cded5654a2db58287f6da1e033fa38a16bec0f
-- repo_url: github/awesome-copilot
-  host: github.com
-  resolved_commit: 5b049e4e196c10aab8ddfd9e492323d08cf985b0
-  virtual_path: instructions/code-review-generic.instructions.md
-  is_virtual: true
-  deployed_files:
-  - .claude/rules/code-review-generic.md
-  deployed_file_hashes:
-    .claude/rules/code-review-generic.md: sha256:a268d8525c641834e8b1eca79f4549a3b1e0c50d4cddce9bf909c021c32b2d86
-  content_hash: sha256:afd1484a4f85894e72e2608d36a1ea4b05a1c1fac3a876564eafa0c6cce66034
-- repo_url: github/awesome-copilot
-  host: github.com
-  resolved_commit: 5b049e4e196c10aab8ddfd9e492323d08cf985b0
+  resolved_commit: eaaffd5d020b756a2777a4b1b161d2bdc126d9a0
+  version: 1.0.0
   virtual_path: instructions/shell.instructions.md
   is_virtual: true
+  package_type: apm_package
   deployed_files:
   - .claude/rules/shell.md
   deployed_file_hashes:
-    .claude/rules/shell.md: sha256:3660c18cbd7883b692f45c40f9dd199827e598029bf50d619c8b8faa88a526c4
-  content_hash: sha256:ff0779cb9266e8da6e30f146fc92b54a0fc7b70eade491803b1471d71c2ca665
-- repo_url: jterral/copilot-playbook
+    .claude/rules/shell.md: sha256:12e73c0ad17144ee074335b4d4325df85e3969200969a17c9f05f8f5bb6cc01d
+  content_hash: sha256:9fb163b5a5a893e3e7fc00375c246b3cde9092f9f2daa3f7eaba986fdd72f2ef
+- repo_url: jterral/ai-marketplace
+  name: git-workflow
   host: github.com
-  resolved_commit: d387f512fc8f2b9d8b17afd36389fbe0a157b574
-  virtual_path: skills/git-conventional-commit
+  resolved_commit: ae2171986ac3c7663acac4af75b099370d56cca3
+  version: ae21719
+  virtual_path: plugins/git-workflow
   is_virtual: true
-  package_type: claude_skill
+  package_type: skill_bundle
   deployed_files:
+  - .claude/skills/git-branch-naming
+  - .claude/skills/git-branch-naming/SKILL.md
   - .claude/skills/git-conventional-commit
-  content_hash: sha256:f319e540617d64afb6776b223c32cfb2072241011f9bfa03bcfd62bbd93b5309
-- repo_url: jterral/copilot-playbook
-  host: github.com
-  resolved_commit: d387f512fc8f2b9d8b17afd36389fbe0a157b574
-  virtual_path: skills/git-pull-request
-  is_virtual: true
-  package_type: claude_skill
-  deployed_files:
-  - .claude/skills/git-pull-request
-  content_hash: sha256:3141b33f7e5cb632d2084b3165d9c4b10e440e3f985b47674f7927c588bf54e4
+  - .claude/skills/git-conventional-commit/SKILL.md
+  - .claude/skills/git-pull-request-formatting
+  - .claude/skills/git-pull-request-formatting/SKILL.md
+  deployed_file_hashes:
+    .claude/skills/git-branch-naming/SKILL.md: sha256:483625fa23330e1172a5cd7c9d12e4cc2f92d8b328c72b6454001cbb9a9c90a9
+    .claude/skills/git-conventional-commit/SKILL.md: sha256:3165ceed151ba5886411d8945ce1b966a3069990dbe4d738c321a6ceaf48ec2b
+    .claude/skills/git-pull-request-formatting/SKILL.md: sha256:89471fdee1c3a29bb7ad426fc8bded1cf50cf431d22ff6fe6c50af6de83110b4
+  content_hash: sha256:6000523520093e36c24138a16b20ef031eb699bdb65eb019ac852f0edda6a8ac
 - repo_url: multica-ai/andrej-karpathy-skills
+  name: karpathy-guidelines
   host: github.com
   resolved_commit: 2c606141936f1eeef17fa3043a72095b4765b9c2
+  version: unknown
   virtual_path: skills/karpathy-guidelines
   is_virtual: true
   package_type: claude_skill
   deployed_files:
   - .claude/skills/karpathy-guidelines
+  - .claude/skills/karpathy-guidelines/SKILL.md
+  deployed_file_hashes:
+    .claude/skills/karpathy-guidelines/SKILL.md: sha256:6e22cc54cb02a5e98ae42d06d9d7292db0c1b43894831b32879beb0166b2aea7
   content_hash: sha256:41e8ca055bbde13d240776a14a076a59614057200340c243130a76ba4e64cac8
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/rules/shell.md
+  runtime: null
+  scope: project
+  owners:
+  - github/awesome-copilot/instructions/shell.instructions.md
+  active_owner: github/awesome-copilot/instructions/shell.instructions.md
+  content_hash: sha256:12e73c0ad17144ee074335b4d4325df85e3969200969a17c9f05f8f5bb6cc01d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/git-branch-naming
+  runtime: null
+  scope: project
+  owners:
+  - jterral/ai-marketplace/plugins/git-workflow
+  active_owner: jterral/ai-marketplace/plugins/git-workflow
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/git-branch-naming/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - jterral/ai-marketplace/plugins/git-workflow
+  active_owner: jterral/ai-marketplace/plugins/git-workflow
+  content_hash: sha256:483625fa23330e1172a5cd7c9d12e4cc2f92d8b328c72b6454001cbb9a9c90a9
+- kind: project-relative
+  target: claude
+  value: .claude/skills/git-conventional-commit
+  runtime: null
+  scope: project
+  owners:
+  - jterral/ai-marketplace/plugins/git-workflow
+  active_owner: jterral/ai-marketplace/plugins/git-workflow
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/git-conventional-commit/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - jterral/ai-marketplace/plugins/git-workflow
+  active_owner: jterral/ai-marketplace/plugins/git-workflow
+  content_hash: sha256:3165ceed151ba5886411d8945ce1b966a3069990dbe4d738c321a6ceaf48ec2b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/git-pull-request-formatting
+  runtime: null
+  scope: project
+  owners:
+  - jterral/ai-marketplace/plugins/git-workflow
+  active_owner: jterral/ai-marketplace/plugins/git-workflow
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/git-pull-request-formatting/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - jterral/ai-marketplace/plugins/git-workflow
+  active_owner: jterral/ai-marketplace/plugins/git-workflow
+  content_hash: sha256:89471fdee1c3a29bb7ad426fc8bded1cf50cf431d22ff6fe6c50af6de83110b4
+- kind: project-relative
+  target: claude
+  value: .claude/skills/karpathy-guidelines
+  runtime: null
+  scope: project
+  owners:
+  - multica-ai/andrej-karpathy-skills/skills/karpathy-guidelines
+  active_owner: multica-ai/andrej-karpathy-skills/skills/karpathy-guidelines
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/karpathy-guidelines/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - multica-ai/andrej-karpathy-skills/skills/karpathy-guidelines
+  active_owner: multica-ai/andrej-karpathy-skills/skills/karpathy-guidelines
+  content_hash: sha256:6e22cc54cb02a5e98ae42d06d9d7292db0c1b43894831b32879beb0166b2aea7

@@ -1,8 +1,6 @@
 ---
-name: git-pull-request
-description: PR title and description format for personal projects — uses functional scope (no JIRA).
-user-invocable: true
-tools: [git, github]
+name: git-pull-request-formatting
+description: PR title and description format using Conventional Commit types and functional scope. Use when creating or editing a GitHub pull request.
 ---
 
 ## Prerequisites
@@ -14,7 +12,8 @@ tools: [git, github]
 ## Titles
 
 - Format: `<type>(<scope>): <description>`
-- Use the same types as commits: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`
+- Use the same types as commits (see `git-conventional-commit`): `feat`, `fix`, `chore`, `docs`, `refactor`
+- Mark breaking changes with `!` after the scope (`feat(api)!: ...`); the PR title becomes the squash commit message, so it drives the version bump
 - Scope: a functional noun describing the area of the codebase (e.g., `auth`, `api`, `ci`)
 - Description: imperative, lowercase, no period
 

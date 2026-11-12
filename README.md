@@ -1,4 +1,4 @@
-# 🧰 My Mise Tasks
+# 🧰 Mise Tasks
 
 Shared tasks for [mise-en-place](https://mise.jdx.dev/) so I can keep a single source of truth for common setup and automation steps.
 
@@ -44,9 +44,9 @@ Import only the task collections you need in your `mise.toml`:
 ```toml
 [task_config]
 includes = [
-    "git::ssh://git@github.com/jterral/my-mise-tasks.git//tasks/docker?ref=v2.0.0",
-    "git::ssh://git@github.com/jterral/my-mise-tasks.git//tasks/gitversion?ref=v2.0.0",
-    "git::ssh://git@github.com/jterral/my-mise-tasks.git//tasks/precommit?ref=v2.0.0",
+    "git::ssh://git@github.com/jterral/mise-tasks.git//tasks/docker?ref=v2.0.0",
+    "git::ssh://git@github.com/jterral/mise-tasks.git//tasks/gitversion?ref=v2.0.0",
+    "git::ssh://git@github.com/jterral/mise-tasks.git//tasks/precommit?ref=v2.0.0",
 ]
 ```
 
