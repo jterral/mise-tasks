@@ -12,7 +12,7 @@ Tasks for common Docker workflows using Docker CLI and Docker Compose v2.
 
 - `docker:check-prerequisites` - Verify that Docker CLI and Docker Compose v2 are available
 - `docker:build` - Build a Docker image
-- `docker:clean` - Aggressively clean unused Docker resources
+- `docker:prune` - Aggressively clean unused Docker resources (asks for confirmation)
 - `docker:lint` - Lint a Dockerfile using `docker build --check`
 - `docker:compose:up` - Start services with `docker compose up -d`
 - `docker:compose:down` - Stop services with `docker compose down`
@@ -25,7 +25,7 @@ To include these tasks in your project, add the following to your `mise.toml`:
 ```toml
 [task_config]
 includes = [
-    "git::ssh://git@github.com/myorg/shared-tasks.git//tasks/docker",
+    "git::ssh://git@github.com/jterral/mise-tasks.git//tasks/docker?ref=v2.3.7",
 ]
 ```
 
@@ -35,9 +35,9 @@ When imported via the main repository:
 
 ```bash
 mise task run docker:build --image my-app --tag dev
-mise task run docker:run --image my-app --tag dev --port 8080:80
-mise task run docker:compose-up
-mise task run docker:compose-down
-mise task run docker:lint
-mise task run docker:clean --force
+mise task run docker:lint --file Dockerfile
+mise task run docker:prune
+mise task run docker:compose:up --file docker-compose.yml
+mise task run docker:compose:down
+mise task run docker:compose:lint
 ```
