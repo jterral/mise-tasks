@@ -19,7 +19,7 @@ To include these tasks in your project, add the following to your `mise.toml`:
 ```toml
 [task_config]
 includes = [
-    "git::ssh://git@github.com/myorg/shared-tasks.git//tasks/dotnet",
+    "git::ssh://git@github.com/jterral/mise-tasks.git//tasks/dotnet?ref=v2.3.7",
 ]
 ```
 
