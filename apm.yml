@@ -1,4 +1,4 @@
-name: my-mise-tasks
+name: mise-tasks
 version: 1.0.0
 target:
   - claude
